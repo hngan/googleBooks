@@ -38,7 +38,7 @@ render(){
   </div>
 </div>
            <div>
-                {this.state.books.map((e,i)=><Saves src={e.image} link={e.volumeInfo.infoLink} key={i} title={e.title} description={e.description} author={e.authors}/>)}
+                {this.state.books.map((e,i)=><Saves src={e.image} link={e.link} key={i} title={e.title} description={e.description} author={e.authors}/>)}
             </div>
         </div>
     );
