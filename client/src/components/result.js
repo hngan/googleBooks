@@ -4,7 +4,7 @@ import API from '../utils/API'
 class Result extends React.Component{
 
 save= (title, author, link, src, description)=>{
-const book={title:title, link:link, description:description, src:src, author:author}
+const book={title:title, link:link, description:description, image:src, author:author}
 console.log(book)
 API.saveBook(book)
 }
