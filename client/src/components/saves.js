@@ -13,7 +13,7 @@ class Saves extends React.Component{
           <div class="card-stacked">
             <div class="card-content">
                 <strong>{this.props.title}</strong>
-                <p>By: {this.props.author?:this.props.author : "N/A"}</p>
+                <p>By: {this.props.author?this.props.author : "N/A"}</p>
               <p>{this.props.description}</p>
             </div>
             <div class="card-action">
