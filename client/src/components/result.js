@@ -24,7 +24,7 @@ render(){
         </div>
         <div class="card-action">
           <a href={this.props.link}>View book</a>
-          <button onClick={()=>this.save()}>Save</button>
+          <button onClick={this.save} title={this.props.title} author={this.props.author} link={this.props.link} src={this.props.src} description={this.props.description} >Save</button>
         </div>
       </div>
     </div>
