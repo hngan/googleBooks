@@ -18,7 +18,7 @@ class Saves extends React.Component{
             </div>
             <div class="card-action">
               <a href={this.props.link}>View book</a>
-              <button onClick={this.save}>Delete</button>
+              <button onClick={()=>this.props.delete(this.props.key)}>Delete</button>
             </div>
           </div>
         </div>
