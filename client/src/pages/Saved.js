@@ -5,7 +5,6 @@ class Saved extends React.Component{
 
     state = {
         books: [],
-        search: ""
       };
     
       componentDidMount() {
@@ -51,7 +50,7 @@ loadBooks = () => {
 render(){
     return(
         <div>
-
+          
         </div>
     );
 }

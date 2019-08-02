@@ -2,16 +2,6 @@ import React from 'react'
 import { throws } from 'assert';
 
 class Result extends React.Component{
-constructor(props){
-    super(props);
-    this.state= {
-        title: props.title,
-        author: props.author,
-        description: props.description,
-        link: props.link,
-        image:props.src
-    }
-}
 
 save(){
 
@@ -23,16 +13,16 @@ render(){
      <div class="col s12 m7">
     <div class="card horizontal">
       <div class="card-image">
-        <img src={this.state.image}/>
+        <img src={this.props.src}/>
       </div>
       <div class="card-stacked">
         <div class="card-content">
-            <strong>{this.state.title}</strong>
-            <p>By: {this.state.author[0]}</p>
-          <p>{this.state.description}</p>
+            <strong>{this.props.title}</strong>
+            <p>By: {this.props.author[0]}</p>
+          <p>{this.props.description}</p>
         </div>
         <div class="card-action">
-          <a href={this.state.link}>View book</a>
+          <a href={this.props.link}>View book</a>
           <button onClick={this.save}>Save</button>
         </div>
       </div>

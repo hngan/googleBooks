@@ -39,7 +39,8 @@ render(){
                 <button onClick={this.handleFormSubmit}>Submit</button>
             </form>
             <div>
-                {this.state.results.map((e,i)=><Result src={e.volumeInfo.imageLinks.smallThumbnail} link={e.volumeInfo.infoLink} key={i} title={e.volumeInfo.title} description={e.volumeInfo.description} author={e.volumeInfo.authors}/>)}
+              {console.log("hai")}
+                {this.state.results.map((e,i)=><Result src={e.volumeInfo.imageLinks? e.volumeInfo.imageLinks.smallThumbnail : ""} link={e.volumeInfo.infoLink} key={i} title={e.volumeInfo.title} description={e.volumeInfo.description} author={e.volumeInfo.authors? e.volumeInfo.authors: ["N/A"]}/>)}
             </div>
         </div>
     );
