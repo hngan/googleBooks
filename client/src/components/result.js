@@ -3,9 +3,10 @@ import API from '../utils/API'
 
 class Result extends React.Component{
 
-save= event=>{
-const{title, author, link , description, src}=event.target;
-API.saveBook({title:title, link:link, description:description, src:src, author:author})
+save= (title, author, link, src, description)=>{
+const book={title:title, link:link, description:description, src:src, author:author}
+console.log(book)
+API.saveBook(book)
 }
 
 render(){
@@ -24,7 +25,7 @@ render(){
         </div>
         <div class="card-action">
           <a href={this.props.link}>View book</a>
-          <button onClick={this.save} title={this.props.title} author={this.props.author} link={this.props.link} src={this.props.src} description={this.props.description} >Save</button>
+          <button onClick={()=>this.save(this.props.title, this.props.author, this.props.link, this.props.src, this.props.description)} >Save</button>
         </div>
       </div>
     </div>
