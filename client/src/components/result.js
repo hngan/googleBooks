@@ -1,10 +1,11 @@
 import React from 'react'
-import { throws } from 'assert';
+import API from '../utils/API'
 
 class Result extends React.Component{
 
-save(){
-
+save= event=>{
+const{title, author, link , description, src}=event.target;
+API.saveBook({title:title, link:link, description:description, src:src, author:author})
 }
 
 render(){
@@ -23,7 +24,7 @@ render(){
         </div>
         <div class="card-action">
           <a href={this.props.link}>View book</a>
-          <button onClick={this.save}>Save</button>
+          <button onClick={()=>this.save()}>Save</button>
         </div>
       </div>
     </div>
